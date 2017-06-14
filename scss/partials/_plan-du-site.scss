@@ -1,0 +1,33 @@
+.plan-du-site {
+    font: 1.4rem $font;
+    h2 {
+        color: _palette(brightorange);
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2%;
+    }
+    .plan-site {
+        margin-bottom: 5%;
+        .link-page {
+            color: #373d57;
+            font-size: 20px;
+            font-weight: bold;
+            &:hover {
+            text-decoration: underline;
+            }
+        }
+        .link-page-child {
+            color: #bbbecb;
+            margin-left: 5%;
+            font-size: 18px;
+            &:hover {
+            text-decoration: underline;
+            }
+        }
+    }
+    li {
+        margin-top: 3%;
+    }
+}
+
+

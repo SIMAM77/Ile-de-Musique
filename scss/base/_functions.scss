@@ -1,0 +1,13 @@
+/// Gets a palette value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _palette($keys...) {
+	@return map-get($palette, $keys...);
+}
+
+/// Gets a screen value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _screen($keys...) {
+	@return map-get($screen, $keys...);
+}

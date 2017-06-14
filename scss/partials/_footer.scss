@@ -1,0 +1,59 @@
+footer {
+    font-family: $font;
+    background: #F9F9F9;
+    .col-footer {
+        margin: 2% 0;
+        font-size: 1.4rem;
+        text-align: center;
+        h4 {
+            font: bold 1.6rem $font;
+        }
+        h4,
+        li,
+        p {
+            margin-bottom: 4%;
+        }
+        li {
+            a {
+                color: _palette(black);
+                &:hover {
+                    color: _palette(grey);
+                    text-decoration: underline;
+                }
+            }
+        }
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            font-size: 1.2rem;
+            h4 {
+                font-size: 1.4rem;
+            }
+            h4, li, p {
+                margin-bottom: 5%;
+            }
+        }
+    }
+}
+
+.col-footer .social {
+    li {
+        display: inline-block;
+        margin-right: 2%;
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+            [class*='icon-'] {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+footer .bottom-line {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    font: italic 1rem $font;
+    border-top: 1px solid _palette(lightgrey);
+}

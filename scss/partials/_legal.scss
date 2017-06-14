@@ -1,0 +1,25 @@
+#cgl,
+#mentions-legales {
+  font: 1.4rem/1.8rem $font;
+  .cgl-content,
+  .ml-content {
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+  h2 {
+    font: bold 2.4rem $font;
+    color: _palette(brightorange);
+    margin-bottom: 1em;
+  }
+  h3 {
+    font: bold 2rem $font;
+    margin-top: 1em;
+  }
+  h4 {
+    text-decoration: underline;
+    margin-top: 5px;
+  }
+  ul {
+    list-style : circle inside;
+  }
+}

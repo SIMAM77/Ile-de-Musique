@@ -1,0 +1,921 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 7, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 32, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 37, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 41, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+body {
+  line-height: 1;
+  background: #F2F2F2; }
+
+/* line 45, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 48, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 51, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 56, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+main {
+  background: #fff; }
+
+/* line 5, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+a {
+  text-decoration: none; }
+  /* line 7, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+  a:hover {
+    color: inherit;
+    text-decoration: none;
+    transition: 800ms cubic-bezier(0.19, 1, 0.22, 1); }
+
+/* line 14, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+.container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+/* line 19, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+.path {
+  margin-top: 4em !important;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  /* line 23, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+  .path li {
+    display: inline-block;
+    font: italic 1rem "Raleway", sans-serif; }
+    /* line 26, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+    .path li.active {
+      font-weight: bold; }
+    /* line 29, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+    .path li::after {
+      content: '>';
+      margin: 0 .8em; }
+    /* line 33, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+    .path li:last-child::after {
+      content: ''; }
+    /* line 36, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+    .path li a {
+      color: #333333; }
+      /* line 38, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_general.scss */
+      .path li a:hover {
+        text-decoration: underline; }
+
+/**
+* RALEWAY FONT
+**/
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-bold-webfont.eot");
+  src: url("../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold-webfont.woff2") format("woff2"), url("../fonts/raleway-bold-webfont.woff") format("woff"), url("../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-bolditalic-webfont.eot");
+  src: url("../fonts/raleway-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bolditalic-webfont.woff2") format("woff2"), url("../fonts/raleway-bolditalic-webfont.woff") format("woff"), url("../fonts/raleway-bolditalic-webfont.ttf") format("truetype"), url("../fonts/raleway-bolditalic-webfont.svg#ralewaybold_italic") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-extrabold-webfont.eot");
+  src: url("../fonts/raleway-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extrabold-webfont.woff2") format("woff2"), url("../fonts/raleway-extrabold-webfont.woff") format("woff"), url("../fonts/raleway-extrabold-webfont.ttf") format("truetype"), url("../fonts/raleway-extrabold-webfont.svg#ralewayextrabold") format("svg");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-extrabolditalic-webfont.eot");
+  src: url("../fonts/raleway-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extrabolditalic-webfont.woff2") format("woff2"), url("../fonts/raleway-extrabolditalic-webfont.woff") format("woff"), url("../fonts/raleway-extrabolditalic-webfont.ttf") format("truetype"), url("../fonts/raleway-extrabolditalic-webfont.svg#ralewayextrabold_italic") format("svg");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-extralight-webfont.eot");
+  src: url("../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../fonts/raleway-extralight-webfont.woff") format("woff"), url("../fonts/raleway-extralight-webfont.ttf") format("truetype"), url("../fonts/raleway-extralight-webfont.svg#ralewayextralight") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-extralightitalic-webfont.eot");
+  src: url("../fonts/raleway-extralightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extralightitalic-webfont.woff2") format("woff2"), url("../fonts/raleway-extralightitalic-webfont.woff") format("woff"), url("../fonts/raleway-extralightitalic-webfont.ttf") format("truetype"), url("../fonts/raleway-extralightitalic-webfont.svg#ralewayextralight_italic") format("svg");
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-italic-webfont.eot");
+  src: url("../fonts/raleway-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-italic-webfont.woff2") format("woff2"), url("../fonts/raleway-italic-webfont.woff") format("woff"), url("../fonts/raleway-italic-webfont.ttf") format("truetype"), url("../fonts/raleway-italic-webfont.svg#ralewayitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-light-webfont.eot");
+  src: url("../fonts/raleway-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-light-webfont.woff2") format("woff2"), url("../fonts/raleway-light-webfont.woff") format("woff"), url("../fonts/raleway-light-webfont.ttf") format("truetype"), url("../fonts/raleway-light-webfont.svg#ralewaylight") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-lightitalic-webfont.eot");
+  src: url("../fonts/raleway-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-lightitalic-webfont.woff2") format("woff2"), url("../fonts/raleway-lightitalic-webfont.woff") format("woff"), url("../fonts/raleway-lightitalic-webfont.ttf") format("truetype"), url("../fonts/raleway-lightitalic-webfont.svg#ralewaylight_italic") format("svg");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/raleway-medium-webfont.eot");
+  src: url("../fonts/raleway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../fonts/raleway-medium-webfont.woff") format("woff"), url("../fonts/raleway-medium-webfont.ttf") format("truetype"), url("../fonts/raleway-medium-webfont.svg#ralewaymedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+* ICOMOON
+**/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?so920e");
+  src: url("../fonts/icomoon.eot?so920e#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?so920e") format("truetype"), url("../fonts/icomoon.woff?so920e") format("woff"), url("../fonts/icomoon.svg?so920e#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 210, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 225, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_fonts.scss */
+.icon-twitter:before {
+  content: "\e900"; }
+
+/* line 228, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_fonts.scss */
+.icon-fb:before {
+  content: "\e901"; }
+
+/* line 231, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/base/_fonts.scss */
+.icon-bag:before {
+  content: "\e902"; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_header.scss */
+header {
+  height: 6em;
+  padding: 2em 2%;
+  position: relative;
+  background: #FFF; }
+
+/* line 3, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+header .main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
+  /* line 7, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+  header .main-nav ul li {
+    font: bold 1.6rem "Raleway", sans-serif;
+    flex: 0 0 auto;
+    text-transform: uppercase; }
+    /* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+    header .main-nav ul li a {
+      padding: 1em 0 .5em 0;
+      color: #333; }
+
+/* line 19, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+header .main-nav > ul > li {
+  margin-right: 5%; }
+  /* line 21, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+  header .main-nav > ul > li:last-child {
+    margin-right: 0; }
+  /* line 24, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_main-nav.scss */
+  header .main-nav > ul > li > a:hover {
+    border-bottom: 3px solid #ffbc1b;
+    transition: none; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+.burger-icon {
+  float: right;
+  position: relative;
+  top: -5px;
+  width: 30px;
+  height: 38px;
+  cursor: pointer; }
+  /* line 8, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon .bar {
+    height: 4px;
+    width: 30px;
+    background: #333333; }
+    /* line 12, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-icon .bar:nth-child(2) {
+      position: absolute;
+      top: 9px; }
+    /* line 16, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-icon .bar:nth-child(3) {
+      position: absolute;
+      top: 18px; }
+  /* line 21, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font: bold 1rem "Raleway", sans-serif;
+    text-transform: uppercase;
+    text-align: center; }
+  /* line 30, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon:hover p {
+    color: #ffbc1b;
+    transition: 800ms cubic-bezier(0.19, 1, 0.22, 1); }
+  /* line 34, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon:hover .bar {
+    background: #ffbc1b;
+    transition: 800ms cubic-bezier(0.19, 1, 0.22, 1); }
+  /* line 40, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon.opened p {
+    display: none; }
+  /* line 43, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-icon.opened .bar {
+    transition: transform .5s ease-in-out; }
+    /* line 45, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-icon.opened .bar:first-child {
+      position: absolute;
+      top: 15px;
+      transform: rotate(45deg); }
+    /* line 50, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-icon.opened .bar:nth-child(2) {
+      display: none; }
+    /* line 53, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-icon.opened .bar:nth-child(3) {
+      top: 15px;
+      transform: rotate(-45deg); }
+
+/* line 60, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+.burger-menu-inner {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out; }
+  /* line 69, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-menu-inner.opened {
+    max-height: 1000px; }
+  /* line 72, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-menu-inner a {
+    color: #333333; }
+    /* line 74, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-menu-inner a:hover {
+      color: #ffbc1b; }
+  /* line 78, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-menu-inner > ul {
+    padding: 5% 7%;
+    background: #fff; }
+    /* line 81, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-menu-inner > ul > li {
+      padding: 2.5% 0;
+      font: 600 1.4rem "Raleway", sans-serif;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd; }
+      /* line 86, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+      .burger-menu-inner > ul > li:first-child, .burger-menu-inner > ul > li:last-child {
+        border: none; }
+      /* line 90, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+      .burger-menu-inner > ul > li:first-child {
+        font-size: 1.1rem; }
+      /* line 93, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+      .burger-menu-inner > ul > li:last-child .icon-bag {
+        font-size: 1.6rem;
+        margin-right: 1%; }
+  /* line 100, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+  .burger-menu-inner li.dropdown ul {
+    margin-top: 2%; }
+    /* line 102, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_burger-menu.scss */
+    .burger-menu-inner li.dropdown ul li {
+      padding-left: 5%;
+      margin-bottom: 2%; }
+
+/* line 3, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage h3 {
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 5px 0;
+  font: 500 2.4rem "Raleway", sans-serif;
+  text-align: center;
+  border-bottom: 3px solid #ffbc1b; }
+
+/* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage .home-intro {
+  background: url("../img-layout/home-bg.jpg") 0 0/cover no-repeat;
+  margin-right: -30px;
+  margin-left: -30px;
+  height: calc(100vh - 6em);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 20, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage .home-intro-inner {
+  text-align: center; }
+  /* line 22, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .home-intro-inner h2 {
+    color: #fff;
+    font: italic 100 4.8rem "Raleway", sans-serif;
+    text-shadow: 0px 5px 9px rgba(51, 51, 51, 0.5); }
+  /* line 27, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .home-intro-inner p {
+    color: #fff;
+    font: 1.6rem/2.4rem "Raleway", sans-serif; }
+  /* line 31, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .home-intro-inner div {
+    margin-top: 2em; }
+    @media screen and (min-width: 600px) {
+      /* line 31, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .home-intro-inner div {
+        display: inline-block;
+        width: 40%; } }
+    /* line 37, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .home-intro-inner div a {
+      display: block;
+      width: 60%;
+      margin: auto;
+      padding: 10px 15px;
+      color: #fff;
+      font: 1.4rem "Raleway", sans-serif;
+      border-radius: 20px;
+      border: 1px solid #ffbc1b; }
+      /* line 46, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .home-intro-inner div a.btn-search {
+        background: #ffbc1b; }
+      @media screen and (min-width: 600px) {
+        /* line 37, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+        #homepage .home-intro-inner div a {
+          width: auto; }
+          /* line 51, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+          #homepage .home-intro-inner div a:first-child {
+            margin-right: 5%; } }
+
+/* line 58, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage .genre-list,
+#homepage .how-to {
+  margin-top: 5%;
+  text-align: center; }
+
+/* line 65, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage .genre-list li {
+  margin-bottom: 2%; }
+  /* line 67, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .genre-list li div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: #000; }
+    /* line 73, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .genre-list li div img {
+      display: block;
+      max-width: 100%;
+      opacity: .4; }
+    /* line 78, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .genre-list li div a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center; }
+      /* line 85, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .genre-list li div a span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font: 1.6rem "Raleway", sans-serif;
+        transition: all .2s ease-in-out; }
+      /* line 94, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .genre-list li div a:hover span {
+        display: inline-block;
+        position: relative;
+        top: 47%;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #fff; }
+
+/* line 107, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+#homepage .how-to {
+  font: 1.4rem "Raleway", sans-serif;
+  margin-bottom: 5%; }
+  /* line 110, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .how-to .steps {
+    margin-top: 5%; }
+  /* line 113, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+  #homepage .how-to .row {
+    margin-right: 0; }
+    /* line 115, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .how-to .row .step {
+      position: relative;
+      text-align: justify;
+      margin-bottom: 15%; }
+      @media screen and (min-width: 768px) {
+        /* line 115, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+        #homepage .how-to .row .step {
+          margin-bottom: 5%; } }
+      /* line 122, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .how-to .row .step span {
+        position: absolute;
+        top: 45%;
+        margin-top: -4rem;
+        color: rgba(0, 0, 0, 0.1);
+        font: 8rem/0 "Raleway", sans-serif; }
+      /* line 129, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .how-to .row .step strong {
+        color: #ffa200;
+        font-weight: bold; }
+      /* line 133, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+      #homepage .how-to .row .step a {
+        color: #ffbc1b; }
+        /* line 135, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+        #homepage .how-to .row .step a:hover {
+          color: #333333; }
+    /* line 140, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .how-to .row:nth-child(2n+1) .step span {
+      left: 0; }
+    /* line 143, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_homepage.scss */
+    #homepage .how-to .row:nth-child(2n+2) .step span {
+      right: 0; }
+
+/* line 2, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+#contribution [class*='col-'] {
+  float: none;
+  margin: 0 auto; }
+
+/* line 6, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+#contribution .intro {
+  text-align: center; }
+  /* line 8, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution .intro h2 {
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 5px 0;
+    font: 500 2.4rem "Raleway", sans-serif;
+    text-align: center;
+    border-bottom: 3px solid #ffbc1b; }
+  /* line 16, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution .intro p {
+    margin-bottom: 1%;
+    text-align: left;
+    font: 1.4rem/2rem "Raleway", sans-serif; }
+    /* line 20, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution .intro p.intro-title {
+      font: italic 1.8rem "Raleway", sans-serif; }
+    @media screen and (max-width: 768px) {
+      /* line 16, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+      #contribution .intro p {
+        margin-bottom: 3%; } }
+
+/* line 29, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+#contribution form {
+  margin-top: 5%; }
+  /* line 31, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form div {
+    margin-bottom: 3%; }
+  /* line 35, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form label {
+    width: 30%;
+    font: 500 1.4rem "Raleway", sans-serif; }
+    /* line 38, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form label + textarea {
+      vertical-align: top; }
+    /* line 41, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form label .required {
+      font-size: 2rem;
+      color: #ff0000; }
+  /* line 46, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form input,
+  #contribution form textarea,
+  #contribution form select {
+    box-shadow: inset 1px 0 10px 0px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff; }
+    /* line 53, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form input:focus,
+    #contribution form textarea:focus,
+    #contribution form select:focus {
+      outline-color: #ffbc1b; }
+  /* line 58, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form input[type="text"] {
+    display: inline-block;
+    width: 60%;
+    padding: 8px 10px;
+    font: 1.4rem "Raleway", sans-serif; }
+  /* line 64, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form input[type="submit"] {
+    display: block;
+    width: 50%;
+    padding: 8px 15px;
+    margin: 8% auto 5% auto;
+    font: bold 1.4rem "Raleway", sans-serif;
+    background: #ffbc1b;
+    box-shadow: none;
+    border: 1px solid #ffbc1b; }
+    /* line 73, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form input[type="submit"]:hover {
+      background: #fff;
+      color: #ffbc1b; }
+  /* line 79, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form textarea {
+    width: 60%;
+    height: 15em;
+    padding: 5px 10px;
+    vertical-align: top;
+    font: 1.2rem/1.8rem "Raleway", sans-serif; }
+  /* line 86, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+  #contribution form select {
+    height: 2em;
+    font: 1.4rem "Raleway", sans-serif; }
+  @media screen and (max-width: 768px) {
+    /* line 93, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form label {
+      display: block;
+      width: auto; }
+    /* line 97, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form input[type="submit"] {
+      width: 60%;
+      margin: 8% 0 5% 0; }
+    /* line 101, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_contribution.scss */
+    #contribution form input[type],
+    #contribution form textarea {
+      width: 100%; } }
+
+/* line 2, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+#liste-artistes .path {
+  float: none;
+  margin: auto; }
+
+/* line 7, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+#liste-artistes .banner-search {
+  margin-right: -30px;
+  margin-left: -30px; }
+
+/* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+#liste-artistes .container-search {
+  height: 50vh;
+  background: url("../img-layout/liste-bg.jpg") 0 0/cover no-repeat; }
+  @media screen and (min-width: 768px) {
+    /* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .container-search {
+      height: 80vh; } }
+  /* line 17, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+  #liste-artistes .container-search .search-bar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: none;
+    margin: 0 auto; }
+    /* line 24, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .container-search .search-bar form {
+      width: 100%; }
+    /* line 27, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .container-search .search-bar label {
+      display: block;
+      font: 2rem "Raleway", sans-serif;
+      color: #fff; }
+    /* line 32, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .container-search .search-bar input[type="search"] {
+      width: 80%;
+      height: 3em;
+      color: #fff;
+      font: 1.4rem "Raleway", sans-serif;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent; }
+      @media screen and (min-width: 1000px) {
+        /* line 32, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+        #liste-artistes .container-search .search-bar input[type="search"] {
+          width: 90%; } }
+    /* line 44, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .container-search .search-bar input[type="submit"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 15px 10px;
+      font: bold 1.4rem "Raleway", sans-serif;
+      color: #fff;
+      border: 0;
+      background: transparent; }
+
+/* line 56, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+#liste-artistes .artists {
+  float: none;
+  margin: 2% auto;
+  text-align: center; }
+  /* line 60, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+  #liste-artistes .artists h2 {
+    display: inline-block;
+    margin-bottom: 2em;
+    padding: 5px 0;
+    font: 500 2.4rem "Raleway", sans-serif;
+    text-align: center;
+    border-bottom: 3px solid #ffbc1b; }
+  /* line 68, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+  #liste-artistes .artists .band {
+    position: relative;
+    margin-bottom: 5%;
+    text-align: left; }
+    /* line 72, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .artists .band figure img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%; }
+    /* line 77, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .artists .band .description {
+      margin-top: 5%; }
+      @media screen and (min-width: 768px) {
+        /* line 77, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+        #liste-artistes .artists .band .description {
+          margin-top: 0; } }
+    /* line 83, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .artists .band h3 {
+      font: 1.8rem "Raleway", sans-serif;
+      margin-bottom: 2%; }
+    /* line 87, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .artists .band p {
+      font: 1.2rem/1.8rem "Raleway", sans-serif; }
+    /* line 90, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+    #liste-artistes .artists .band .read-more {
+      margin-top: 2%;
+      font: bold 1.4rem "Raleway", sans-serif; }
+      /* line 93, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+      #liste-artistes .artists .band .read-more a {
+        color: #ffbc1b;
+        text-decoration: underline; }
+        /* line 96, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_liste.scss */
+        #liste-artistes .artists .band .read-more a:hover {
+          text-decoration: none; }
+
+/* line 3, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+#artiste .presentation {
+  margin-top: 4em; }
+  /* line 5, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+  #artiste .presentation figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; }
+  /* line 10, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+  #artiste .presentation .band-infos {
+    margin-top: 5%;
+    font: 1.6rem/2.2rem "Raleway", sans-serif; }
+    @media screen and (min-width: 690px) {
+      /* line 10, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .presentation .band-infos {
+        margin-top: 0; } }
+    /* line 16, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .presentation .band-infos h2 {
+      display: inline-block;
+      padding: 10px 0;
+      font: bold 2.4rem "Raleway", sans-serif;
+      text-align: center;
+      border-bottom: 3px solid #ffbc1b; }
+    /* line 23, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .presentation .band-infos h4 {
+      font-weight: bold; }
+    /* line 26, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .presentation .band-infos p {
+      text-align: justify; }
+      /* line 28, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .presentation .band-infos p.description {
+        margin: 5% auto; }
+      /* line 31, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .presentation .band-infos p.band-roles span {
+        font-weight: bold;
+        font-style: italic; }
+
+/* line 38, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+#artiste .equipment {
+  margin-top: 4em; }
+  /* line 40, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+  #artiste .equipment h3 {
+    font: italic bold 2rem "Raleway", sans-serif;
+    text-align: center;
+    margin-bottom: 2em; }
+  /* line 45, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+  #artiste .equipment .instrument {
+    width: 275px;
+    margin: 2em auto;
+    padding: 2em;
+    font: 1.4rem "Raleway", sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 23.75px 1.25px rgba(0, 0, 0, 0.05); }
+    /* line 52, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .equipment .instrument figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 2em; }
+      /* line 59, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .equipment .instrument figure img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%; }
+    /* line 65, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .equipment .instrument p {
+      margin-bottom: 2%; }
+      /* line 67, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .equipment .instrument p.type {
+        text-transform: uppercase; }
+      /* line 70, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .equipment .instrument p.model {
+        text-transform: uppercase;
+        font-weight: bold; }
+      /* line 74, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .equipment .instrument p.price {
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #ffbc1b; }
+    /* line 80, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+    #artiste .equipment .instrument button {
+      margin: 1em auto;
+      padding: 4% 12%;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 1px solid #ffbc1b;
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.05);
+      background: #ffbc1b; }
+      /* line 89, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_artiste.scss */
+      #artiste .equipment .instrument button:hover {
+        box-shadow: none; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+#cgl,
+#mentions-legales {
+  font: 1.4rem/1.8rem "Raleway", sans-serif; }
+  /* line 4, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+  #cgl .cgl-content,
+  #cgl .ml-content,
+  #mentions-legales .cgl-content,
+  #mentions-legales .ml-content {
+    margin-top: 5em;
+    margin-bottom: 5em; }
+  /* line 9, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+  #cgl h2,
+  #mentions-legales h2 {
+    font: bold 2.4rem "Raleway", sans-serif;
+    color: #ffbc1b;
+    margin-bottom: 1em; }
+  /* line 14, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+  #cgl h3,
+  #mentions-legales h3 {
+    font: bold 2rem "Raleway", sans-serif;
+    margin-top: 1em; }
+  /* line 18, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+  #cgl h4,
+  #mentions-legales h4 {
+    text-decoration: underline;
+    margin-top: 5px; }
+  /* line 22, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_legal.scss */
+  #cgl ul,
+  #mentions-legales ul {
+    list-style: circle inside; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+footer {
+  font-family: "Raleway", sans-serif;
+  background: #F9F9F9; }
+  /* line 4, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+  footer .col-footer {
+    margin: 2% 0;
+    font-size: 1.4rem;
+    text-align: center; }
+    /* line 8, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+    footer .col-footer h4 {
+      font: bold 1.6rem "Raleway", sans-serif; }
+    /* line 11, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+    footer .col-footer h4,
+    footer .col-footer li,
+    footer .col-footer p {
+      margin-bottom: 4%; }
+    /* line 17, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+    footer .col-footer li a {
+      color: #333333; }
+      /* line 19, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+      footer .col-footer li a:hover {
+        color: #999;
+        text-decoration: underline; }
+    @media screen and (min-width: 768px) {
+      /* line 4, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+      footer .col-footer {
+        text-align: left;
+        font-size: 1.2rem; }
+        /* line 28, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+        footer .col-footer h4 {
+          font-size: 1.4rem; }
+        /* line 31, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+        footer .col-footer h4, footer .col-footer li, footer .col-footer p {
+          margin-bottom: 5%; } }
+
+/* line 39, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+.col-footer .social li {
+  display: inline-block;
+  margin-right: 2%; }
+  /* line 43, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+  .col-footer .social li a:hover {
+    text-decoration: none; }
+  /* line 46, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+  .col-footer .social li a [class*='icon-'] {
+    font-size: 2.2rem; }
+
+/* line 53, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_footer.scss */
+footer .bottom-line {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  font: italic 1rem "Raleway", sans-serif;
+  border-top: 1px solid #ddd; }
+
+/* line 1, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+.plan-du-site {
+  margin-bottom: 5%; }
+  /* line 3, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+  .plan-du-site h2 {
+    color: #000;
+    font-size: 30px; }
+  /* line 8, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+  .plan-du-site .plan-site .link-page {
+    color: #373d57;
+    font-size: 20px;
+    font-weight: bold; }
+    /* line 12, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+    .plan-du-site .plan-site .link-page:hover {
+      text-decoration: underline; }
+  /* line 16, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+  .plan-du-site .plan-site .link-page-child {
+    color: #bbbecb;
+    margin-left: 5%;
+    font-size: 18px; }
+    /* line 20, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+    .plan-du-site .plan-site .link-page-child:hover {
+      text-decoration: underline; }
+  /* line 25, /Users/Drew/Desktop/Webmarket/wm-projetfinal/scss/partials/_plan-du-site.scss */
+  .plan-du-site li {
+    margin-top: 3%; }
+
+/*# sourceMappingURL=screen.css.map */

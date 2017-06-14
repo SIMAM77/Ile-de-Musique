@@ -1,0 +1,32 @@
+header {
+    .main-nav {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 8em;
+            position: relative;
+            li {
+                font: bold 1.6rem $font;
+                flex: 0 0 auto;
+                text-transform: uppercase;
+                a {
+                    padding: 1em 0 .5em 0;
+                    color: #333;
+                }
+            }
+        }
+    }
+    .main-nav > ul {
+        & > li {
+            margin-right: 5%;
+            &:last-child {
+                margin-right: 0;
+            }
+            & > a:hover {
+                border-bottom: 3px solid _palette(brightorange);
+                transition: none;
+            }
+        }
+    }
+}

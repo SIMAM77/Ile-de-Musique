@@ -1,0 +1,103 @@
+#liste-artistes {
+    .path {
+        float: none;
+        margin: auto;
+    }
+    // SEARCH
+    .banner-search {
+        margin-right: -30px;
+        margin-left: -30px;
+    }
+    .container-search {
+        height: 50vh;
+        background: url('../img-layout/liste-bg.jpg') 0 0/cover no-repeat;
+        @media screen and (min-width: 768px){
+            height: 80vh;
+        }
+        .search-bar {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: none;
+            margin: 0 auto;
+            form {
+                width: 100%;
+            }
+            label {
+                display: block;
+                font: 2rem $font;
+                color: #fff;
+            }
+            input[type="search"] {
+                width: 80%;
+                height: 3em;
+                color: #fff;
+                font: 1.4rem $font;
+                border: none;
+                border-bottom: 2px solid #fff;
+                background: transparent;
+                @media screen and (min-width: 1000px) {
+                    width: 90%;
+                }
+            }
+            input[type="submit"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                padding: 15px 10px;
+                font: bold 1.4rem $font;
+                color: #fff;
+                border: 0;
+                background: transparent;
+            }
+        }
+    }
+    // ARTISTS LIST
+    .artists {
+        float: none;
+        margin: 2% auto;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            margin-bottom: 2em;
+            padding: 5px 0;
+            font: 500 2.4rem $font;
+            text-align: center;
+            border-bottom: 3px solid _palette(brightorange);
+        }
+        .band {
+            position: relative;
+            margin-bottom: 5%;
+            text-align: left;
+            figure img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            .description {
+                margin-top: 5%;
+                @media screen and (min-width: 768px) {
+                    margin-top: 0;
+                }
+            }
+            h3 {
+                font: 1.8rem $font;
+                margin-bottom: 2%;
+            }
+            p {
+                font: 1.2rem/1.8rem $font;
+            }
+            .read-more {
+                margin-top: 2%;
+                font: bold 1.4rem $font;
+                a {
+                    color: _palette(brightorange);
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

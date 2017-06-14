@@ -1,0 +1,19 @@
+header {
+  height: 8em;
+  padding: 0 2%;
+  position: relative;
+  background: #FFF;
+  .logo {
+      height: 8em;
+      align-items: center;
+      display: flex;
+    h1 {
+      height: 5em;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

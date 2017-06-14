@@ -1,0 +1,110 @@
+#contribution {
+  [class*='col-'] {
+    float: none;
+    margin: 0 auto;
+  }
+  .intro {
+    text-align: center;
+    h2 {
+      display: inline-block;
+      margin-bottom: 1em;
+      padding: 5px 0;
+      font: 500 2.4rem $font;
+      text-align: center;
+      border-bottom: 3px solid _palette(brightorange);
+    }
+    p {
+      margin-bottom: 1%;
+      text-align: left;
+      font: 1.4rem/2rem $font;
+      &.intro-title {
+        font: italic 1.8rem $font;
+      }
+      @media screen and (max-width: 768px) {
+        margin-bottom: 3%;
+      }
+    }
+  }
+
+  form {
+    margin-top: 5%;
+    div {
+      margin-bottom: 3%;
+      //background: red;
+    }
+    label {
+      width: 30%;
+      font: 500 1.4rem $font;
+      & + textarea {
+        vertical-align: top;
+      }
+      .required {
+        font-size: 2rem;
+        color: #ff0000;
+      }
+    }
+    input,
+    textarea,
+    select{
+      box-shadow: inset 1px 0 10px 0px rgba(0, 0, 0, 0.1);
+      border: 1px solid _palette(lightgrey);
+      border-radius: 5px;
+      background: #fff;
+      &:focus {
+        outline-color: _palette(brightorange);
+      }
+    }
+    input {
+      &[type="text"] {
+        display: inline-block;
+        width: 60%;
+        padding: 8px 10px;
+        font: 1.4rem $font;
+      }
+      &[type="submit"] {
+        display: block;
+        width: 50%;
+        padding: 8px 15px;
+        margin: 8% auto 5% auto;
+        font: bold 1.4rem $font;
+        background: _palette(brightorange);
+        box-shadow: none;
+        border: 1px solid _palette(brightorange);
+        &:hover {
+          background: #fff;
+          color: _palette(brightorange);
+        }
+      }
+    }
+    textarea {
+      width: 60%;
+      height: 15em;
+      padding: 5px 10px;
+      vertical-align: top;
+      font: 1.2rem/1.8rem $font;
+    }
+    select {
+      height: 2em;
+      font: 1.4rem $font;
+    }
+
+    //<form> media queries
+    @media screen and (max-width: 768px){
+      label {
+        display: block;
+        width: auto;
+      }
+      input[type="submit"]{
+        width: 60%;
+        margin: 8% 0 5% 0;
+      }
+      input[type],
+      textarea{
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 500px){
+    }
+
+  }
+}
